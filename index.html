@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPI Pro BR - Learning Focused on the Brazilian Market</title>
+    <title>KPI Mastery Engine: Tracking and Achieving Goals</title>
     <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom Font */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
+            background-color: #f7f7f7; /* Light gray background */
         }
         /* Custom styles for line clamping on the cards */
         .line-clamp-3 {
@@ -19,19 +19,34 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+        /* Gradient for the KPI Title */
+        .kpi-gradient {
+            background-image: linear-gradient(45deg, #1e40af, #3b82f6); /* Dark Blue to Sky Blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom style for active option selection */
+        .option-active {
+            box-shadow: 0 0 0 3px #1e40af; /* Blue ring effect */
+            background-color: #eff6ff !important;
+            border-color: #93c5fd !important;
+        }
+        .header-bg {
+            background-color: #1f2937; /* Dark Gray */
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
     <!-- Header -->
-    <header id="app-header" class="bg-green-700 shadow-xl p-4 sticky top-0 z-10">
+    <header id="app-header" class="header-bg shadow-xl p-4 sticky top-0 z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 id="home-link-header" class="text-2xl font-extrabold text-white tracking-widest cursor-pointer hover:text-yellow-300 transition duration-300">
-                KPI Pro BR <span class="text-yellow-300">🇧🇷</span>
+            <h1 id="home-link-header" class="text-2xl font-extrabold text-white tracking-widest cursor-pointer hover:text-blue-400 transition duration-300">
+                KPI Mastery Engine <span class="text-blue-400">📊</span>
             </h1>
             <nav class="space-x-4">
-                <button id="home-link-nav" class="text-white font-medium hover:text-yellow-300 transition duration-300 focus:outline-none">
-                    Home / Lessons
+                <button id="home-link-nav" class="text-white font-medium hover:text-blue-400 transition duration-300 focus:outline-none">
+                    Home / Modules
                 </button>
             </nav>
         </div>
@@ -40,103 +55,107 @@
     <!-- Main Content Area -->
     <main id="app-content" class="container mx-auto flex-grow p-4 sm:p-6 lg:p-8">
         <!-- Content will be injected here by JavaScript -->
-        <div class="text-center p-12 text-gray-500">Loading application...</div>
+        <div class="text-center p-12 text-gray-500">Initializing KPI Mastery Engine...</div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-blue-800 p-4 mt-12">
+    <footer class="header-bg p-4 mt-12">
         <div class="container mx-auto text-center text-white text-sm">
-            (2025 @ Daby)
+            (2025 @ DABY KPI Mastery Engine) - Measure What Matters.
         </div>
     </footer>
 
     <script>
-        // --- 1. DATA STRUCTURES (Recreated from React) ---
+        // --- 1. DATA STRUCTURES (Focused on Key Performance Indicators) ---
 
         const lessons = [
             {
                 id: 1,
-                role: 'Sales Analyst',
-                level: 'Júnior',
-                title: 'Volume and Productivity KPIs',
-                description: 'Focus on direct effort and sales result metrics, essential for beginners in an SP Call Center.',
+                role: 'Management',
+                level: 'Staff & HR',
+                title: 'Staff Productivity & Engagement KPIs',
+                description: 'This module focuses on the metrics a manager uses to assess team health, individual contribution, and ensure staff are aligned with organizational goals, driving efficiency and retention.',
                 kpis: [
-                    { name: 'Number of Calls Made', description: 'Daily contact volume to ensure minimum effort.' },
-                    { name: 'Conversion Rate (Lead-to-Sale)', description: 'The effectiveness in closing deals, measuring pitch quality.' },
-                    { name: 'Average Ticket Size', description: 'The average value of each sale made.' },
+                    { name: 'Employee Net Promoter Score (eNPS)', description: 'Measures staff likelihood to recommend the workplace. Key indicator of morale and future retention risk.' },
+                    { name: 'Training ROI (Return on Investment)', description: 'Assesses the value generated (e.g., productivity lift) versus the cost of staff development programs.' },
+                    { name: 'Time to Competency', description: 'The average time taken for a new hire to reach target productivity levels. Crucial for onboarding efficiency.' },
                 ],
                 scenario: {
-                    title: 'The Week of Goals at the SP Call Center',
+                    title: 'The Manager\'s Dashboard: Addressing Low eNPS',
                     steps: [
-                        { id: 1, title: 'The Analyst\'s Challenge', content: 'João, a Junior Analyst in São Paulo, has a target of 100 calls and 5% Conversion. He needs to balance effort (volume) and quality (conversion).', imageAlt: 'Young person in front of a computer with headphones' },
-                        { id: 2, title: 'Effort KPI in Action', content: 'By making only 15 calls/day, he fails the Effort KPI. He must use work time more efficiently.', imageAlt: 'Bar chart of call volume' },
-                        { id: 3, title: 'Quality Adjustment (Conversion)', content: 'After focusing on calls, he achieves volume, but conversion drops to 3%. The manager advises focusing on active listening and customer problem-solving to meet the 5% target.', imageAlt: 'Sales funnel chart' },
-                        { id: 4, title: 'Result and Lesson', content: 'By improving pitch quality, João reaches 6% conversion, exceeding the target. He learns that the conversion KPI is more valuable than the volume KPI.', imageAlt: 'Person celebrating success' },
+                        { id: 1, title: 'Detection (The Red Flag)', content: 'The quarterly eNPS score drops from +35 to +5. The manager knows this indicates a significant risk of burnout and turnover, signaling immediate action is required.', imageAlt: 'A worried manager looking at a dashboard with low scores.' },
+                        { id: 2, title: 'Diagnosis (Root Cause Analysis)', content: 'The manager reviews qualitative feedback and finds the "Time to Competency" is too high due to confusing tooling. New staff are frustrated and feel unsupported.', imageAlt: 'A complex flow chart of a business process.' },
+                        { id: 3, title: 'Intervention (Targeted Action)', content: 'A new, structured training module is implemented, reducing the Time to Competency by 25%. This improves the early-career experience for new hires.', imageAlt: 'A person leading a presentation on new training materials.' },
+                        { id: 4, title: 'Validation (The Long-Term Metric)', content: 'After six months, the eNPS recovers to +25. The positive change in the "Training ROI" confirms the intervention was effective, linking improved engagement to lower training costs and higher retention.', imageAlt: 'A graph showing a steady upward trend.' },
                     ],
                 },
                 exercise: [
                     {
                         id: 1,
-                        text: "What is the main focus of a Junior Sales Analyst's KPIs, compared to a Manager's?",
-                        options: ["Long-term financial results", "Effort metrics and direct output (activities)", "Marketing budget allocation", "Strategic customer retention"],
+                        text: "Which of the following KPIs is the best **leading indicator** for potential staff turnover (attrition)?",
+                        options: ["Annual Revenue (Lagging Business KPI)", "Employee Net Promoter Score (Leading Engagement KPI)", "Cost per Hire (Recruitment KPI)", "Average Deal Size (Sales KPI)"],
                         correctAnswerIndex: 1,
-                        explanation: "The difference in KPI focus is determined by the **level of control and strategic impact**. Staff (Junior/Pleno) performance is measured by **Operational KPIs**—metrics they can directly influence day-to-day, like call volume or conversion rate. Managers and Executives focus on **Strategic KPIs** (like ROI or long-term growth) that measure overall business health and goal alignment.",
+                        explanation: "eNPS is a leading indicator. A low score predicts future behavior (quitting), whereas turnover rate is a lagging indicator (it reports what already happened).",
                     },
                 ],
             },
             {
                 id: 2,
-                role: 'Marketing Coordinator',
-                level: 'Gerente',
-                title: 'Strategic and Return (ROI) KPIs',
-                description: 'Focus on budget management and the financial impact of product launch campaigns in the Northeast. **The figures do not lie!**',
+                role: 'Sales',
+                level: 'Executive',
+                title: 'Sales Funnel and Revenue KPIs',
+                description: 'Analyze the core metrics that track the efficiency and predictability of the sales process, from lead generation to final contract closure and recurring revenue.',
                 kpis: [
-                    { name: 'Customer Acquisition Cost (CAC)', description: 'The average cost of acquiring a new customer (should be lower than LTV).' },
-                    { name: 'Return on Investment (ROI)', description: 'The real financial impact of the campaign.' },
+                    { name: 'Sales Cycle Length', description: 'The average time (days/weeks) required to convert a qualified lead into a paying customer. Shorter is usually better.' },
+                    { name: 'Conversion Rate by Stage', description: 'The percentage of leads moving successfully from one stage of the pipeline to the next. Indicates funnel health.' },
+                    { name: 'Customer Lifetime Value (CLV)', description: 'The total revenue a customer is expected to generate over their business relationship. Crucial for budget and ROI.' },
                 ],
                 scenario: {
-                    title: 'Product Launch in the Northeast',
+                    title: 'The VP of Sales Challenge: Boosting Predictability',
                     steps: [
-                        { id: 1, title: 'Regional Planning', content: 'Maria, a Coordinator in Recife, has a R$ 50,000.00 budget and a maximum CAC target of R$ 50.00 for an app launch in the region.', imageAlt: 'Map of Northeast Brazil with markers' },
-                        { id: 2, title: 'CAC Monitoring', content: 'The initial campaign has a CAC of R$ 60.00. **Action:** Maria decides to pause lower-performing media (Radio) and reallocate the budget to digital channels with better conversion (Instagram Ads).', imageAlt: 'Customer Acquisition Cost calculation' },
-                        { id: 3, title: 'Strategic ROI Analysis', content: 'In the end, the 200% ROI justifies the investment. The CAC KPI is important, but ROI (Profitability) is the definitive metric for a manager.', imageAlt: 'Return on Investment chart' },
+                        { id: 1, title: 'The Constraint (The Bottleneck)', content: 'The "Sales Cycle Length" is highly unpredictable, ranging from 30 to 120 days. This makes forecasting revenue almost impossible.', imageAlt: 'A broken hourglass representing unpredictable timing.' },
+                        { id: 2, title: 'Analysis (Conversion Rate Focus)', content: 'Analysis of "Conversion Rate by Stage" shows a massive drop-off between the "Proposal Sent" stage and the "Negotiation" stage. Proposals are too generic.', imageAlt: 'A filter funnel graphic showing loss at a specific stage.' },
+                        { id: 3, title: 'Adjustment (Process Standardization)', content: 'The VP implements mandatory "Discovery Calls" to personalize proposals based on specific client pain points. This adds a step, but increases conversion rate later on.', imageAlt: 'A sales team collaborating on strategy.' },
+                        { id: 4, title: 'Outcome (Predictability Gained)', content: 'The Conversion Rate between Proposal and Negotiation increases by 20%, stabilizing the "Sales Cycle Length" to a predictable 45 days. This leads directly to more accurate revenue forecasting.', imageAlt: 'A steady stream of coins flowing into a bank.' },
                     ],
                 },
                 exercise: [
                     {
                         id: 1,
-                        text: "Which marketing KPI is considered the most strategic by a Manager?",
-                        options: ["Page Views", "Post Likes", "Cost Per Click (CPC)", "Return on Investment (ROI)"],
-                        correctAnswerIndex: 3,
-                        explanation: "As a **Strategic KPI**, ROI measures the ultimate financial return, directly connecting campaign spending to profit. Managers prioritize ROI because it justifies investment and measures the business impact, unlike activity metrics (CPC, Views) which only track effort.",
+                        text: "If the 'Sales Cycle Length' is too long, what is the immediate impact on the business?",
+                        options: ["It increases Customer Lifetime Value (CLV)", "It makes financial revenue forecasting inaccurate and difficult", "It dramatically reduces the cost of customer acquisition", "It signals low staff eNPS"],
+                        correctAnswerIndex: 1,
+                        explanation: "A long and unpredictable cycle length ruins the finance department's ability to forecast when cash flow will arrive, which is critical for budgeting and investment decisions.",
                     },
                 ],
             },
             {
                 id: 3,
-                role: 'HR Manager',
-                level: 'Sênior',
-                title: 'Retention and Engagement KPIs',
-                description: 'Focus on retaining talent and ensuring a productive environment at the Minas Gerais branch.',
+                role: 'Operations',
+                level: 'Senior',
+                title: 'Customer Service & Success KPIs',
+                description: 'These metrics evaluate how effectively the organization resolves customer issues, maintains satisfaction, and retains its customer base, which directly impacts recurring revenue.',
                 kpis: [
-                    { name: 'Voluntary Turnover Rate', description: 'Percentage of employees who voluntarily leave the company.' },
-                    { name: 'eNPS (Employee Net Promoter Score)', description: 'Measures employee engagement and the likelihood of an employee recommending the company.' },
+                    { name: 'Customer Satisfaction Score (CSAT)', description: 'Directly measures how satisfied customers are with specific interactions (e.g., after a support ticket is closed).' },
+                    { name: 'First Contact Resolution (FCR)', description: 'The percentage of customer issues resolved during the very first interaction. High FCR often correlates with high CSAT.' },
+                    { name: 'Churn Rate', description: 'The rate at which customers cease doing business with the company. The inverse of Retention Rate, essential for growth models.' },
                 ],
                 scenario: {
-                    title: 'Staff Turnover Crisis at the Minas Gerais Branch',
+                    title: 'The Customer Success Director\'s Pivot: Fighting Churn',
                     steps: [
-                        { id: 1, title: 'The Turnover Alert', content: 'Mariana, an HR Manager in Belo Horizonte, observes that the **Voluntary Turnover Rate** has risen from 5% to 15% in 6 months, a sign of a retention crisis.', imageAlt: 'Alarm clock symbol' },
-                        { id: 2, title: 'The eNPS Cause', content: 'An **eNPS** survey reveals the score dropped 30 points, indicating low satisfaction. Detractors cite a lack of career plan and feedback.', imageAlt: 'eNPS chart with a sharp drop' },
-                        { id: 3, title: 'Action and Career Plan', content: 'Mariana implements a new development and mentorship program. In 3 months, the eNPS rises 10 points, and Turnover begins to slow down, showing that the KPIs are connected.', imageAlt: 'People in a mentorship meeting' },
+                        { id: 1, title: 'The Problem (The Leak)', content: 'The "Churn Rate" has spiked by 5% in the last quarter. The company is losing more customers than it gains, putting significant pressure on sales.', imageAlt: 'A chart with a steep decline on one axis.' },
+                        { id: 2, title: 'The Analysis (Connecting the Dots)', content: 'The director links the high Churn Rate to a low "First Contact Resolution" (FCR) score. Customers are frustrated by having to call or chat multiple times for the same issue.', imageAlt: 'Two gears failing to mesh properly.' },
+                        { id: 3, title: 'The Fix (Empowering Staff)', content: 'The CS team is given advanced training and authorization to perform common troubleshooting steps previously reserved for the engineering team. This investment targets FCR directly.', imageAlt: 'A support agent confidently helping a customer.' },
+                        { id: 4, title: 'The Result (Retention Achieved)', content: 'FCR increases by 15%, which immediately boosts the "Customer Satisfaction Score" (CSAT) by 10 points. As a result of better service, the Churn Rate drops back to normal levels.', imageAlt: 'A large, happy face icon indicating high satisfaction.' },
                     ],
                 },
                 exercise: [
                     {
                         id: 1,
-                        text: "What does a low eNPS in an organizational climate survey usually indicate?",
-                        options: ["That sales are low", "Problems in product quality", "Low engagement and risk of increased turnover", "Need to reduce Customer Acquisition Cost (CAC)"],
+                        text: "If a Customer Service team focuses on boosting 'First Contact Resolution' (FCR), which other key metric is most likely to improve as a direct result?",
+                        options: ["Sales Cycle Length (Irrelevant)", "Training ROI (Indirect effect)", "Customer Satisfaction Score (Directly Related)", "Time to Competency (Staff KPI)"],
                         correctAnswerIndex: 2,
-                        explanation: "eNPS is a measure of employee engagement. A low score indicates the team is dissatisfied and prone to leaving the company (high turnover).",
+                        explanation: "When a customer's problem is solved immediately (high FCR), their satisfaction (CSAT) is almost always higher than when they have to follow up multiple times.",
                     },
                 ],
             },
@@ -150,54 +169,96 @@
 
         const appContent = document.getElementById('app-content');
 
-        /**
-         * Renders the entire application based on the current state.
-         * @param {number|null} id - The ID of the lesson to navigate to, or null for home.
-         */
-        const navigateTo = (id) => {
-            AppState.currentPageId = id;
-            window.scrollTo(0, 0);
-
-            if (id === null) {
-                renderHome();
-            } else {
-                const lesson = lessons.find(l => l.id === id);
-                if (lesson) {
-                    renderLessonDetail(lesson);
-                } else {
-                    appContent.innerHTML = `<div class="text-center p-12 text-red-500 text-xl">Lesson not found.</div>`;
-                }
-            }
-        };
-
         // --- 3. RENDERING FUNCTIONS ---
 
-        /**
-         * Renders the Home View (list of lessons).
-         */
+        const renderDefinition = () => {
+            return `
+                <section class="bg-blue-50 p-6 rounded-xl shadow-lg border-l-4 border-blue-600 mb-8">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                        <div class="text-5xl bg-white p-4 rounded-full shadow-sm">🎯</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                                Core Definition: Key Performance Indicator (KPI)
+                            </h3>
+                            <p class="text-gray-700 text-lg mb-2">
+                                <strong>Meaning:</strong> A measurable value that demonstrates how effectively a company is achieving key business objectives.
+                            </p>
+                            <p class="text-gray-600 italic mb-4 text-sm">
+                                KPIs must be SMART (Specific, Measurable, Achievable, Relevant, Time-bound). They tell you *if* you are winning, and help you strategize *how* to win.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-white p-3 rounded border border-blue-200 hover:shadow-md transition-shadow">
+                                    <span class="block text-xs font-bold text-blue-600 uppercase">Portuguese Equivalent</span>
+                                    <span class="text-lg font-semibold text-gray-800">Indicador-Chave de Desempenho</span>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-blue-200 hover:shadow-md transition-shadow">
+                                    <span class="block text-xs font-bold text-blue-600 uppercase">Key Concept</span>
+                                    <span class="text-lg font-semibold text-gray-800">Leading vs. Lagging</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `;
+        };
+
+        const renderHowToUse = () => {
+             return `
+                <section class="bg-gray-200 p-6 rounded-xl shadow-inner border border-gray-400 mt-8">
+                    <h3 class="text-3xl font-extrabold text-gray-800 mb-4 flex items-center">
+                        <span class="mr-3 text-4xl">🔬</span> The KPI Analysis Framework
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6 font-semibold">
+                        Good management means managing KPIs. Use this framework to move from raw data to strategic intervention.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-4 rounded-lg shadow-md border-t-4 border-blue-600">
+                            <h4 class="font-bold text-xl text-gray-800 mb-2">1. Metric Observation (The Signal)</h4>
+                            <p class="text-gray-600 text-sm">Identify an outlier or trend in the "Core KPI Set." This is the data that demands your attention.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md border-t-4 border-sky-500">
+                            <h4 class="font-bold text-xl text-sky-800 mb-2">2. Causal Mapping (The "Why")</h4>
+                            <p class="text-gray-600 text-sm">Use the "KPI Analysis Sequence" to trace the root cause. Why did the metric change? What is the *leading* factor?</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md border-t-4 border-indigo-600">
+                            <h4 class="font-bold text-xl text-indigo-800 mb-2">3. Strategic Intervention (The Action)</h4>
+                            <p class="text-gray-600 text-sm">Implement a measurable fix. The goal is always to improve the target KPI and validate the success through subsequent measurements.</p>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
         const renderHome = () => {
             const lessonCards = lessons.map(lesson => {
-                let levelClasses = '';
-                if (lesson.level === 'Gerente') {
-                    levelClasses = 'bg-red-100 text-red-800';
-                } else if (lesson.level === 'Sênior') {
-                    levelClasses = 'bg-orange-100 text-orange-800';
-                } else {
-                    levelClasses = 'bg-blue-100 text-blue-800';
+                let borderColor = 'border-gray-500';
+                let badgeBg = 'bg-gray-300';
+                let badgeText = 'text-gray-800';
+
+                if (lesson.level === 'Executive' || lesson.level === 'Senior') {
+                    borderColor = 'border-blue-700';
+                    badgeBg = 'bg-blue-100';
+                    badgeText = 'text-blue-800';
+                } else if (lesson.level === 'Staff & HR') {
+                    borderColor = 'border-green-600';
+                    badgeBg = 'bg-green-100';
+                    badgeText = 'text-green-800';
                 }
 
                 return `
-                    <div data-id="${lesson.id}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-green-500 cursor-pointer lesson-card">
+                    <div data-id="${lesson.id}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-t-4 ${borderColor} cursor-pointer lesson-card">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-gray-900">${lesson.role}</h3>
-                            <span class="px-3 py-1 text-xs font-semibold rounded-full shadow-sm ${levelClasses}">
-                                ${lesson.level}
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full shadow-sm ${badgeBg} ${badgeText}">
+                                ${lesson.level} Focus
                             </span>
                         </div>
-                        <h4 class="text-lg font-medium text-green-600 mb-3">${lesson.title}</h4>
+                        <h4 class="text-lg font-medium text-gray-700 mb-3">${lesson.title}</h4>
                         <p class="text-sm text-gray-600 mb-4 line-clamp-3">${lesson.description}</p>
-                        <div class="text-xs font-semibold text-blue-600 flex items-center">
-                            View Full Lesson &rarr;
+                        <div class="text-xs font-semibold text-blue-700 flex items-center mt-2">
+                            Explore Key Metrics (KPIs) &rarr;
                         </div>
                     </div>
                 `;
@@ -205,21 +266,26 @@
 
             appContent.innerHTML = `
                 <div class="space-y-8">
-                    <header class="text-center py-8 bg-blue-100 rounded-xl shadow-md">
-                        <h2 class="text-4xl font-black text-blue-800 mb-2">
-                            Learning KPIs in Practice
+                    <header class="text-center py-8 bg-white rounded-xl shadow-md border-b-4 border-blue-600">
+                        <h2 class="text-5xl font-black mb-2 kpi-gradient">
+                            KPI Mastery Engine 📊
                         </h2>
                         <p class="text-xl text-gray-600">
-                            Select a role and level to start your practical training with real-world scenarios.
+                            The essential metrics for management, sales, and operations.
                         </p>
                     </header>
+
+                    ${renderDefinition()}
+                    ${renderHowToUse()}
+                    
+                    <h3 class="text-3xl font-bold text-gray-700 border-b pb-2 mt-12">Select a Functional Area to Master</h3>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         ${lessonCards}
                     </div>
                 </div>
             `;
 
-            // Attach event listeners to the new cards
             document.querySelectorAll('.lesson-card').forEach(card => {
                 card.addEventListener('click', (e) => {
                     const id = parseInt(card.getAttribute('data-id'));
@@ -228,15 +294,11 @@
             });
         };
 
-        /**
-         * Renders the Lesson Detail View.
-         * @param {object} lesson
-         */
         const renderLessonDetail = (lesson) => {
             const kpiList = lesson.kpis.map((kpi, index) => `
-                <div key="${index}" class="p-4 border border-gray-100 rounded-lg bg-gray-50">
+                <div key="${index}" class="p-4 border border-gray-300 rounded-lg bg-white shadow-sm">
                     <p class="font-semibold text-lg text-gray-900 flex items-center">
-                        <span class="text-yellow-500 mr-2 text-2xl">★</span> ${kpi.name}
+                        <span class="text-blue-600 mr-2 text-2xl">📈</span> ${kpi.name}
                     </p>
                     <p class="text-sm text-gray-600 mt-1">${kpi.description}</p>
                 </div>
@@ -244,31 +306,27 @@
 
             appContent.innerHTML = `
                 <div class="space-y-10">
-                    <button id="back-to-list-btn" class="text-blue-600 hover:text-blue-800 transition duration-200 flex items-center mb-6">
+                    <button id="back-to-list-btn" class="text-gray-700 hover:text-gray-900 transition duration-200 flex items-center mb-6">
                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                        Back to Lesson List
+                        Back to Areas
                     </button>
                     
-                    <header class="text-center py-6 bg-green-600 text-white rounded-xl shadow-lg">
-                        <p class="text-sm font-light uppercase opacity-80">${lesson.role} | Level ${lesson.level}</p>
+                    <header class="text-center py-6 bg-gray-800 text-white rounded-xl shadow-xl">
+                        <p class="text-sm font-light uppercase opacity-80">${lesson.role} | ${lesson.level} Metrics</p>
                         <h2 class="text-3xl font-black mt-1 mb-2">${lesson.title}</h2>
                         <p class="text-lg font-medium opacity-90 mx-auto max-w-3xl">
                             ${lesson.description}
                         </p>
                     </header>
 
-                    <!-- Section 1: Key KPIs -->
                     <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-blue-500">
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">Key Performance Indicators (KPIs)</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <h3 class="text-2xl font-bold text-gray-700 mb-4">Core KPI Set (Indicadores-Chave)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             ${kpiList}
                         </div>
                     </div>
 
-                    <!-- Section 2: Scenario Walkthrough -->
                     <div id="scenario-container"></div>
-
-                    <!-- Section 3: Interactive Exercise -->
                     <div id="exercise-container"></div>
                 </div>
             `;
@@ -279,15 +337,10 @@
             renderExercise(lesson);
         };
 
-        /**
-         * Renders the Scenario Stepper component.
-         * @param {object} lesson
-         */
         const renderScenarioStepper = (lesson) => {
             const container = document.getElementById('scenario-container');
             const lessonId = lesson.id;
             
-            // Initialize current step for the lesson if not exists
             if (AppState.scenarioSteps[lessonId] === undefined) {
                 AppState.scenarioSteps[lessonId] = 0;
             }
@@ -298,45 +351,35 @@
 
             container.innerHTML = `
                 <div class="bg-white p-6 rounded-xl shadow-xl border border-gray-200">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-700">Scenario: ${lesson.scenario.title}</h3>
-                    <p class="text-sm text-gray-500 italic mb-4">Real-World Case Walkthrough in Brazil.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-700">KPI Analysis Sequence: ${lesson.scenario.title}</h3>
+                    <p class="text-sm text-gray-500 italic mb-4">Steps from Observation to Strategic Intervention.</p>
                     
-                    <!-- Progress Bar -->
                     <div class="mb-6">
                         <div class="h-2 bg-gray-200 rounded-full">
-                            <div 
-                                class="h-2 bg-yellow-500 rounded-full transition-all duration-500"
-                                style="width: ${progress}%"
-                            ></div>
+                            <div class="h-2 bg-blue-600 rounded-full transition-all duration-500" style="width: ${progress}%"></div>
                         </div>
-                        <p class="text-right text-sm text-gray-600 mt-1">Step ${currentStep + 1} of ${totalSteps}</p>
+                        <p class="text-right text-sm text-gray-600 mt-1">Phase ${currentStep + 1} of ${totalSteps}</p>
                     </div>
                     
-                    <!-- Step Content -->
-                    <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded-lg mb-6">
-                        <h4 class="text-xl font-bold mb-3 text-green-700">${currentStepData.title}</h4>
+                    <div class="p-4 bg-gray-100 border-l-4 border-blue-600 rounded-lg mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-gray-800">${currentStepData.title}</h4>
                         <p class="text-gray-700 whitespace-pre-line leading-relaxed">${currentStepData.content}</p>
                     </div>
                     
-                    <!-- Navigation Buttons -->
                     <div class="flex justify-between">
                         <button id="prev-step-btn" 
-                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm
-                            ${currentStep === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'}"
+                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm ${currentStep === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-gray-700 text-white hover:bg-gray-800'}"
                             ${currentStep === 0 ? 'disabled' : ''}>
-                            &larr; Previous
+                            &larr; Previous Step
                         </button>
                         <button id="next-step-btn" 
-                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm
-                            ${currentStep === totalSteps - 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-green-600 text-white hover:bg-green-700'}"
-                            ${currentStep === totalSteps - 1 ? 'disabled' : ''}>
-                            ${currentStep === totalSteps - 1 ? 'Scenario Complete!' : 'Next Step \u2192'}
+                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm ${currentStep === totalSteps - 1 ? 'bg-blue-500 text-white cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'}"
+                            ${currentStep === totalSteps - 1 ? 'Analysis Complete!' : 'Next Phase \u2192'}
                         </button>
                     </div>
                 </div>
             `;
 
-            // Attach event listeners
             document.getElementById('prev-step-btn').addEventListener('click', () => {
                 AppState.scenarioSteps[lessonId] = Math.max(currentStep - 1, 0);
                 renderScenarioStepper(lesson);
@@ -347,17 +390,11 @@
             });
         };
 
-
-        /**
-         * Renders the Interactive Exercise component.
-         * @param {object} lesson
-         */
         const renderExercise = (lesson) => {
             const container = document.getElementById('exercise-container');
             const lessonId = lesson.id;
             const questions = lesson.exercise;
 
-            // Initialize exercise state for the lesson if not exists
             if (!AppState.exerciseState) AppState.exerciseState = {};
             if (!AppState.exerciseState[lessonId]) {
                 AppState.exerciseState[lessonId] = {
@@ -373,24 +410,24 @@
             const handleSelect = (qIndex, aIndex) => {
                 if (state.submitted) return;
                 state.selectedAnswers[qIndex] = aIndex;
-                renderExercise(lesson); // Re-render to show selection
+                renderExercise(lesson); 
             };
 
             const handleSubmit = () => {
                 state.submitted = true;
-                renderExercise(lesson); // Re-render to show results
+                renderExercise(lesson);
                 document.getElementById('exercise-results')?.scrollIntoView({ behavior: 'smooth' });
             };
 
             const handleReset = () => {
                 state.submitted = false;
                 state.selectedAnswers = Array(questions.length).fill(null);
-                renderExercise(lesson); // Re-render to reset quiz
+                renderExercise(lesson); 
             };
 
             const scoreDisplay = state.submitted ? `
-                <div id="exercise-results" class="p-4 mb-6 bg-blue-100 border-l-4 border-blue-500 text-blue-700 font-bold text-lg rounded-md">
-                    Your Result: ${score} out of ${questions.length} (${((score / questions.length) * 100).toFixed(0)}%)
+                <div id="exercise-results" class="p-4 mb-6 bg-blue-100 border-l-4 border-blue-500 text-blue-900 font-bold text-lg rounded-md">
+                    Analysis Result: ${score}/${questions.length}. Excellent KPI Literacy!
                 </div>
             ` : '';
 
@@ -402,10 +439,8 @@
                     const isCorrect = q.correctAnswerIndex === aIndex;
                     
                     if (!state.submitted) {
-                        // Not submitted: show hover/selected state
-                        optionClasses = isSelected ? 'bg-blue-200 border-blue-500 cursor-pointer' : 'hover:bg-gray-50 cursor-pointer';
+                        optionClasses = isSelected ? 'option-active' : 'hover:bg-gray-200 cursor-pointer';
                     } else {
-                        // Submitted: show result state
                         if (isCorrect) {
                             optionClasses = 'bg-green-100 border-green-500 font-bold';
                             prefix = '✅ ';
@@ -430,8 +465,8 @@
                 }).join('');
 
                 const explanationMarkup = state.submitted ? `
-                    <div class="mt-3 text-sm p-3 bg-gray-50 border-l-2 border-gray-300 rounded-br-lg rounded-bl-lg">
-                        <p class="font-bold text-green-700">Explanation:</p>
+                    <div class="mt-3 text-sm p-3 bg-gray-100 border-l-2 border-blue-500 rounded-br-lg rounded-bl-lg">
+                        <p class="font-bold text-blue-700">KPI Insight (*Visão Estratégica*):</p>
                         <p class="text-gray-600">${q.explanation}</p>
                     </div>
                 ` : '';
@@ -452,25 +487,24 @@
             const buttonMarkup = !state.submitted ? `
                 <button
                     id="submit-quiz-btn"
-                    class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition duration-300 ${!isComplete ? 'disabled:bg-gray-400 disabled:cursor-not-allowed' : 'shadow-md'}"
+                    class="w-full bg-blue-700 text-white font-bold py-3 rounded-lg hover:bg-blue-800 transition duration-300 ${!isComplete ? 'disabled:bg-gray-400 disabled:cursor-not-allowed' : 'shadow-md'}"
                     ${!isComplete ? 'disabled' : ''}
                 >
-                    Check Answers
+                    Validate KPI Knowledge
                 </button>
             ` : `
                 <button
                     id="reset-quiz-btn"
-                    class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md"
+                    class="w-full bg-sky-500 text-white font-bold py-3 rounded-lg hover:bg-sky-600 transition duration-300 shadow-md"
                 >
-                    Try Again
+                    Retake Test
                 </button>
             `;
 
-
             container.innerHTML = `
-                <div class="mt-8 p-6 bg-yellow-50 rounded-xl shadow-lg border-t-4 border-yellow-500">
-                    <h3 class="text-3xl font-extrabold text-red-600 mb-6 border-b pb-2">
-                        Interactive Exercise 💡
+                <div class="mt-8 p-6 bg-white rounded-xl shadow-lg border-t-4 border-gray-400">
+                    <h3 class="text-3xl font-extrabold text-gray-700 mb-6 border-b pb-2">
+                        Test Your KPI Technique 🧠
                     </h3>
                     ${scoreDisplay}
                     ${questionMarkup}
@@ -478,7 +512,6 @@
                 </div>
             `;
 
-            // Attach event listeners for selection
             document.querySelectorAll('.option-select').forEach(optionDiv => {
                 optionDiv.addEventListener('click', (e) => {
                     const qIndex = parseInt(optionDiv.getAttribute('data-qindex'));
@@ -487,7 +520,6 @@
                 });
             });
 
-            // Attach event listeners for submit/reset
             if (document.getElementById('submit-quiz-btn')) {
                 document.getElementById('submit-quiz-btn').addEventListener('click', handleSubmit);
             }
@@ -496,15 +528,27 @@
             }
         };
 
+        // --- 4. NAVIGATION & INIT ---
 
-        // --- 4. INITIALIZATION ---
+        const navigateTo = (id) => {
+            AppState.currentPageId = id;
+            window.scrollTo(0, 0);
+
+            if (id === null) {
+                renderHome();
+            } else {
+                const lesson = lessons.find(l => l.id === id);
+                if (lesson) {
+                    renderLessonDetail(lesson);
+                } else {
+                    appContent.innerHTML = `<div class="text-center p-12 text-red-500 text-xl">Module not found.</div>`;
+                }
+            }
+        };
 
         window.onload = () => {
-            // Set up universal navigation listeners
             document.getElementById('home-link-header').addEventListener('click', () => navigateTo(null));
             document.getElementById('home-link-nav').addEventListener('click', () => navigateTo(null));
-            
-            // Start the application on the home view
             navigateTo(null);
         };
     </script>
